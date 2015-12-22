@@ -8,4 +8,5 @@ An alpha version app that uses Riot Games' API to look up a players game history
 ![Screenshot of summoner lookup](LookupScreenShot.png "Alpha lookup build")
 
 Current Working version of the app
+
 ![Current Working Version of the app](currentbuild.gif "Current Build")
