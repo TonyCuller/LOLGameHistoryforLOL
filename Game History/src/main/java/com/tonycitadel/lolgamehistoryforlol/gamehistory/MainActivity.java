@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     private ListView listView;
     private GameListAdapter adapter;
     private String apiKey = ApiKey.getAPIKEY();
+    private long id;
 
     /**
      * Called when the activity is first created.
@@ -37,6 +38,8 @@ public class MainActivity extends Activity {
         listView = (ListView) findViewById(R.id.list);
         adapter = new GameListAdapter(this, R.layout.list_row, gameDataList);
         listView.setAdapter(adapter);
+        id = getIntent().getExtras().getLong("id");
+        System.out.println(id);
         downloadData();
 
 
@@ -67,7 +70,7 @@ public class MainActivity extends Activity {
 
     private void downloadData() {
         RiotRestClient client = new RiotRestClient();
-        client.getRecentGamesService().listRecentGames("na", "20806859", apiKey).enqueue(new Callback<Model>() {
+        client.getRecentGamesService().listRecentGames("na", String.valueOf(id), apiKey).enqueue(new Callback<Model>() {
             @Override
             public void onResponse(Response<Model> response, Retrofit retrofit) {
                 if (response.isSuccess()) {
