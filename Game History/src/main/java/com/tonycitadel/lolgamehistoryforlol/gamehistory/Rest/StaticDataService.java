@@ -17,4 +17,6 @@ public interface StaticDataService {
 
     @GET("/api/lol/static-data/{region}/v1.2/item/{id}")
     Call<Item> itemData(@Path("region") String region, @Path("id") String id, @Query("api_key") String apikey);
+
+
 }
