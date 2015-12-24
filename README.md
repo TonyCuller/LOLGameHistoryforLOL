@@ -10,3 +10,8 @@ An alpha version app that uses Riot Games' API to look up a players game history
 Current Working version of the app
 
 ![Current Working Version of the app](currentbuild.gif "Current Build")
+
+Stuff to be added (Hopefully)
+* Detail Page
+* Rate Limit
+* Updated Design
